@@ -1,0 +1,193 @@
+body{
+    font-family: sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+.color__data{
+    height: 32px;
+    width: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: rgb(248, 248, 248);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.colorStatus{
+    height: 100%;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(243, 255, 74);
+    border-radius: 50%;
+}
+
+.colorArr{
+    padding:  0 20px;
+    cursor: pointer;
+}
+
+.colorArr svg{
+    transition: transform 0.3s;
+}
+.colorArr--rotated svg{
+    transform: rotate(180deg);
+}
+.colorName input{
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    width: 80px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.color__picker{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    grid-column-gap: 10px;
+}
+
+.color__control{
+    max-width: 330px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.color__item{
+    height: 16px;
+    width: 16px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.color__track{
+    display: flex;
+    grid-column-gap: 10px;
+}
+
+.color__selectLine{
+    display: flex;
+    grid-column-gap: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid gray;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+#colorArr--left svg{
+    transform: rotate(-90deg);
+}
+#colorArr--right svg{
+    transform: rotate(90deg);
+}
+
+.color__trackWrap{
+    width: 226px;
+    overflow: hidden;
+    position: relative;
+    height: 16px;
+}
+.color__track{
+    position: absolute;
+    transition: transform 0.3s;
+}
+
+.color__controlArr{
+    cursor: pointer;
+}
+
+.color__btns button{
+    height: 25px;
+    padding: 0 20px;
+    border-radius: 20px;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.color__previewBlock{
+    height: 25px;
+    width: 30px;
+    border-radius: 2px;
+    background: red;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+
+.color__bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+.color__preview{
+    display: flex;
+    align-items: center;
+    grid-column-gap: 15px;
+}
+
+#okBtn{
+    background: rgb(48, 62, 255);
+    border: 1px solid rgb(48, 62, 255);
+    color:white;
+}
+
+#okBtn:hover{
+    transform: translate(0,-3px);
+}
+
+#cancelBtn{
+    background: white;
+    color:rgb(48, 62, 255);
+    border: 1px solid rgb(48, 62, 255);
+}
+
+#cancelBtn:hover{
+    transform: translate(0,-3px);
+}
+
+.color__pickerItem{
+    position: relative;
+    cursor: pointer;
+}
+.color__pick{
+    position: absolute;
+}
+.color__holstPick{
+    width: 7px;
+    height: 7px;
+    border: 1px solid black;
+    left: 250px;
+    top:6px;
+    transform: translate(-50%,0);
+    border-radius: 50%;
+    background: white;
+}
+
+.color__spectrPick{
+    width: 30px;
+    transform: translate(-50%,0);
+    height: 3px;
+    background-color: black;
+    left: 50%;
+    top:0;
+}
+
+
+.color__control--hidden{
+    display: none;
+}
+
+.color__controlArr--hidden{
+    pointer-events: none;
+    opacity: 0.5;
+}
