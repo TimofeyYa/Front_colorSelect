@@ -22,7 +22,7 @@ function Holst(props){
             canvas.fillRect(0,0,256,256);
             canvas.drawImage(img,0,0);
             canvas.crossOrigin = "Anonymous";
-            console.log(canvas.getImageData(255, 255, 1, 1));
+            
         })
 
        
@@ -85,7 +85,7 @@ function Holst(props){
         canvas.fillStyle = gradient;
         canvas.fillRect(0,0,256,256);
         canvas.drawImage(img,0,0);
-        canvas.crossOrigin = "Anonymous";
+      
         
         wichColor();
     }, [props.holstColor]);
