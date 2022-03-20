@@ -1,13 +1,15 @@
 import classNames from "classnames";
 import React from "react";
 
-function Holst(props){
+import gradient from './bgGradient.png'
+
+function Holst(props){ 
     const holstRef = React.useRef(null);
     const [top, setTop] = React.useState(5);
     const [left, setLeft] = React.useState(250);
     const [isMove, setIsMove] = React.useState(false);
     let img = new Image();
-    img.src = 'https://lh3.googleusercontent.com/-8Dm4nhAOssQ/T_IqwyIFXmI/AAAAAAAAACA/4QKmS7s_otE/s256/bgGradient.png';
+    img.src =gradient;
     img.crossOrigin = "Anonymous";
 
     React.useEffect(()=>{
