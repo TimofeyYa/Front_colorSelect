@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React from "react";
 
 function Holst(props){
@@ -17,7 +18,10 @@ function Holst(props){
         img.addEventListener('load', ()=>{
             gradient = canvas.createLinearGradient(150, 30, 50, 1050);
             gradient.addColorStop(0, props.holstColor);
-            gradient.addColorStop(1, "white");
+            gradient.addColorStop(0.05, props.holstColor);
+            gradient.addColorStop(0.72, "white");
+            gradient.addColorStop(0.63, "black");
+            gradient.addColorStop(1, "black");
             canvas.fillStyle = gradient;
             canvas.fillRect(0,0,256,256);
             canvas.drawImage(img,0,0);
@@ -79,8 +83,10 @@ function Holst(props){
 
         canvas.clearRect(0,0,256,256);
         gradient = canvas.createLinearGradient(150, 30, 50, 1050);
-        gradient.addColorStop(0,  props.holstColor);
-        gradient.addColorStop(0.95, "white");
+        gradient.addColorStop(0, props.holstColor);
+        gradient.addColorStop(0.05, props.holstColor);
+        gradient.addColorStop(0.72, "white");
+        gradient.addColorStop(0.63, "black");
         gradient.addColorStop(1, "black");
         canvas.fillStyle = gradient;
         canvas.fillRect(0,0,256,256);
@@ -101,7 +107,7 @@ function Holst(props){
              ref={holstRef} className="holst" width="256px" height="256px">
                 Произошла ошибка
             </canvas>
-            <div style={{top: top, left: left}} className="color__pick color__holstPick"></div>
+            <div style={{top: top, left: left}}  className={classNames("color__pick color__holstPick",{"color__holstPick--white":top > 130})}></div>
         </div>
     )
 }

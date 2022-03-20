@@ -139,6 +139,7 @@ body{
     background: rgb(48, 62, 255);
     border: 1px solid rgb(48, 62, 255);
     color:white;
+    margin-right: 5px;
 }
 
 #okBtn:hover{
@@ -158,6 +159,8 @@ body{
 .color__pickerItem{
     position: relative;
     cursor: pointer;
+    height: 256px;
+    overflow: hidden;
 }
 .color__pick{
     position: absolute;
@@ -170,7 +173,11 @@ body{
     top:6px;
     transform: translate(-50%,0);
     border-radius: 50%;
-    background: white;
+    
+}
+
+.color__holstPick--white{
+    border: 1px solid white;
 }
 
 .color__spectrPick{
